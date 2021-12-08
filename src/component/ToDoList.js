@@ -38,7 +38,7 @@ export default function ToDoList({token}) {
     if(!task){
       return;
     }
-      const result = await axios.post(`https://twuaiq-todo-backend.herokuapp.com//task/${id}`, {
+      const result = await axios.post(`https://twuaiq-todo-backend.herokuapp.com/task/${id}`, {
         newName:name,
         newTask:task,
         newCheck:check,
@@ -55,7 +55,7 @@ export default function ToDoList({token}) {
 
   const deleteTask = async (id, index)=>{
 
-const deletedTask = await axios.delete(`https://twuaiq-todo-backend.herokuapp.com//task/${id}`,{
+const deletedTask = await axios.delete(`https://twuaiq-todo-backend.herokuapp.com/task/${id}`,{
   headers:{authorization: "Bearer " + token},
 });
 
