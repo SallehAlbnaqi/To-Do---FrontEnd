@@ -10,7 +10,7 @@ export default function ToDoList({token}) {
     const [check, setcheck] = useState(false)
 
     useEffect(async (id) => {
-    const res = await axios.get(`https://twuaiq-todo-backend.herokuapp.com//tasks/${id}`,{
+    const res = await axios.get(`https://twuaiq-todo-backend.herokuapp.com/tasks/${id}`,{
       headers:{authorization: "Bearer " + token},
       // ^ نفس تطبيقنا بالبوست مان 
 
